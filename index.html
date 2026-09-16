@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Meylicious - Artisanal Desserts & Basque Burnt Cheesecake</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="Meylicious - Toko kue & dessert artisanal premium. Spesialis Basque Burnt Cheesecake lumer, Mascarpone Tiramisu, Fudgy Brownies, Choux Pastry, dan Gift Hampers. Dibuat fresh setiap hari.">
+  <meta name="keywords" content="Meylicious, burnt cheesecake, basque cheesecake, tiramisu, kue ulang tahun, dessert box, hampers kue, pastry, brownies lumer">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <span>✨ <strong>Promo Manis:</strong> Gunakan kode voucher <span class="highlight">MEYMANIS</span> untuk diskon 10%!</span>
+    <span>🚚 Pengiriman Sameday & Instant se-Jabodetabek (Dilengkapi Ice Pack Aman)</span>
+  </div>
+
+  <!-- 2. HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand-logo">
+          <div class="brand-name">Mey<span>licious</span></div>
+          <div class="brand-tagline">Artisanal Dessert & Bakery</div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link active">Beranda</a></li>
+          <li><a href="#menu" class="nav-link">Menu Favorit</a></li>
+          <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+          <li><a href="#steps" class="nav-link">Cara Pesan</a></li>
+          <li><a href="#testimonials" class="nav-link">Ulasan</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <!-- Right Header Actions -->
+        <div class="nav-actions">
+          <button class="cart-btn" onclick="openCartDrawer()" aria-label="Keranjang Belanja" title="Lihat Keranjang">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count" style="display: none;">0</span>
+          </button>
+
+          <a href="#menu" class="btn btn-primary" style="display: none; @media(min-width: 900px){display: inline-flex;}">
+            <i class="fas fa-utensils"></i> Order Sekarang
+          </a>
+
+          <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Menu Navigasi">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left Text Content -->
+        <div class="hero-content">
+          <div class="hero-pill">
+            <i class="fas fa-sparkles" style="color: var(--accent-gold);"></i> Freshly Baked Daily With Love
+          </div>
+          <h1 class="hero-title">
+            Sensasi Mewah <span class="cursive">Basque</span> Burnt Cheesecake & Dessert Lumer
+          </h1>
+          <p class="hero-description">
+            Dipanggang segar setiap pagi dengan 100% *cream cheese* murni, mentega Prancis pilihan, dan cokelat Belgia asli. Menghadirkan tekstur lumer di lidah, aroma karamel memikat, serta rasa manis yang pas.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#menu" class="btn btn-primary">
+              <i class="fas fa-cake-candles"></i> Jelajahi Menu Lezat
+            </a>
+            <a href="https://wa.me/6281234567890?text=Halo%20Meylicious,%20saya%20ingin%20tanya%20seputar%20menu%20dan%20pemesanan%20kue%20hari%20ini" target="_blank" class="btn btn-secondary">
+              <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1.2rem;"></i> Chat WhatsApp
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-trust">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fas fa-cheese"></i></div>
+              <div class="trust-text">
+                <h4>100% Cream Cheese</h4>
+                <p>Bahan impor murni</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fas fa-shield-heart"></i></div>
+              <div class="trust-text">
+                <h4>Halal & Higienis</h4>
+                <p>Tanpa bahan pengawet</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fas fa-truck-fast"></i></div>
+              <div class="trust-text">
+                <h4>Kirim Sameday</h4>
+                <p>Packing aman ber-ice pack</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=1000&q=85" alt="Basque Burnt Cheesecake Meylicious">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-card top-left">
+            <div class="floating-badge-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="floating-text">
+              <h5>#1 Best Seller</h5>
+              <p>Basque Burnt Cheesecake</p>
+            </div>
+          </div>
+
+          <div class="floating-card bottom-right">
+            <div class="floating-badge-icon" style="background: #fff3cd; color: #b78103;">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="floating-text">
+              <h5>Rating 4.9 / 5.0</h5>
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span style="color: var(--dark-soft); font-weight: 600; margin-left: 3px;">(1.500+ Ulasan)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. KEY FEATURES RIBBON -->
+  <section class="features-ribbon">
+    <div class="container">
+      <div class="ribbon-grid">
+        <div class="ribbon-item">
+          <div class="ribbon-icon"><i class="fas fa-blender"></i></div>
+          <div>
+            <h4>Bahan Premium Dunia</h4>
+            <p>Elle & Vire butter, Callebaut chocolate, Mascarpone segar.</p>
+          </div>
+        </div>
+        <div class="ribbon-item">
+          <div class="ribbon-icon"><i class="fas fa-fire-burner"></i></div>
+          <div>
+            <h4>Fresh From The Oven</h4>
+            <p>Dipanggang setiap pagi sesuai jadwal pengiriman Anda.</p>
+          </div>
+        </div>
+        <div class="ribbon-item">
+          <div class="ribbon-icon"><i class="fas fa-heart-pulse"></i></div>
+          <div>
+            <h4>Manis Seimbang</h4>
+            <p>Less sugar, tidak bikin eneg, cocok untuk segala usia.</p>
+          </div>
+        </div>
+        <div class="ribbon-item">
+          <div class="ribbon-icon"><i class="fas fa-box-open"></i></div>
+          <div>
+            <h4>Garansi Kemasan Aman</h4>
+            <p>Kotak tebal elegan, cake board kokoh, gratis pisau & lilin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MENU & CATALOG SECTION -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-pill">Katalog Pilihan</span>
+        <h2 class="section-title">Menu Spesial Meylicious</h2>
+        <p class="section-subtitle">
+          Pilih sajian manis favorit Anda, tentukan ukuran yang diinginkan, dan pesan dengan mudah langsung ke WhatsApp kami.
+        </p>
+      </div>
+
+      <!-- Filters & Search Bar -->
+      <div class="menu-filter-bar">
+        <!-- Live Search -->
+        <div class="filter-search-wrap">
+          <i class="fas fa-search filter-search-icon"></i>
+          <input type="text" id="search-input" placeholder="Cari kue, tiramisu, cookies, brownies..." />
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="all">
+            <i class="fas fa-border-all"></i> Semua Menu
+          </button>
+          <button class="category-tab" data-category="cheesecake">
+            <i class="fas fa-cheese"></i> Burnt Cheesecake
+          </button>
+          <button class="category-tab" data-category="tiramisu">
+            <i class="fas fa-mug-hot"></i> Tiramisu Series
+          </button>
+          <button class="category-tab" data-category="pastry">
+            <i class="fas fa-cookie-bite"></i> Pastry & Choux
+          </button>
+          <button class="category-tab" data-category="brownies">
+            <i class="fas fa-cubes-stacked"></i> Brownies & Cookies
+          </button>
+          <button class="category-tab" data-category="hampers">
+            <i class="fas fa-gift"></i> Hampers & Paket Pesta
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Grid Container -->
+      <div class="products-grid" id="products-grid">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT US SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Visual composite -->
+        <div class="about-visual-composite">
+          <img class="about-img-main" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Dapur Meylicious Patisserie">
+          <img class="about-img-sub" src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Baking Process">
+          <div class="about-experience-badge">
+            <div class="badge-num">100%</div>
+            <div class="badge-label">Artisan Handmade</div>
+          </div>
+        </div>
+
+        <!-- About Content -->
+        <div class="about-content">
+          <span class="section-pill">Cerita Kami</span>
+          <h2 class="about-title">Menghadirkan Kebahagiaan dalam Setiap Potongan Kue</h2>
+          <p class="about-lead">
+            Meylicious berawal dari kecintaan tulus terhadap seni membuat kue (*pastry & baking*) yang autentik dan berkelas.
+          </p>
+          <p class="about-text">
+            Kami percaya bahwa kue bukan sekadar makanan manis, melainkan simbol perayaan, kasih sayang, dan momen berharga bersama orang tercinta. Karena itulah, di Meylicious kami tidak pernah berkompromi soal bahan: hanya krim keju terbaik, mentega murni Prancis, ekstrak vanila asli, dan dark chocolate pilihan yang kami gunakan. Setiap hidangan diracik dengan presisi, kesabaran, dan cinta mendalam.
+          </p>
+
+          <div class="about-features-list">
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle about-feature-icon"></i>
+              <div>
+                <h5>Kualitas Tanpa Kompromi</h5>
+                <p>100% bebas pewarna & pengawet sintetis.</p>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle about-feature-icon"></i>
+              <div>
+                <h5>Kustomisasi Spesial</h5>
+                <p>Tersedia kartu ucapan khusus, pita, dan topper kue.</p>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle about-feature-icon"></i>
+              <div>
+                <h5>Dipanggang Tiap Hari</h5>
+                <p>Bukan stok beku, melainkan dibuat segar sesuai pesanan.</p>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fas fa-check-circle about-feature-icon"></i>
+              <div>
+                <h5>Pengiriman Khusus Kue</h5>
+                <p>Kemasan kuat dan ice pack agar kue sampai dalam bentuk sempurna.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#menu" class="btn btn-accent">
+            <i class="fas fa-arrow-right"></i> Lihat Koleksi Kue Hari Ini
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. HOW TO ORDER (STEPS) -->
+  <section class="steps-section" id="steps">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Mudah & Praktis</span>
+        <h2 class="section-title">Cara Pemesanan 4 Langkah</h2>
+        <p class="section-subtitle">
+          Proses pesan kue favorit semudah sentuhan jari, langsung terhubung dengan admin kami via WhatsApp.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="fas fa-cake"></i></div>
+          <h3 class="step-title">Pilih Menu & Ukuran</h3>
+          <p class="step-desc">Pilih varian kue idaman Anda dan tentukan ukuran slice, diameter whole cake, atau box paket.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="fas fa-cart-arrow-down"></i></div>
+          <h3 class="step-title">Masukkan ke Keranjang</h3>
+          <p class="step-desc">Klik tombol keranjang dan masukkan kode promo jika Anda memilikinya untuk mendapatkan potongan harga.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+          <h3 class="step-title">Isi Data & Pengiriman</h3>
+          <p class="step-desc">Masukkan alamat penerima, tanggal & jam antar yang diinginkan, serta ucapan kartu jika ada.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3 class="step-title">Konfirmasi WhatsApp</h3>
+          <p class="step-desc">Pesan akan tersusun rapi otomatis di chat WhatsApp. Admin langsung mengonfirmasi dan memproses pesanan Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CUSTOMER TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Ulasan Pelanggan</span>
+        <h2 class="section-title">Apa Kata Pecinta Manis?</h2>
+        <p class="section-subtitle">
+          Kepuasan dan senyum Anda saat mencicipi kelezatan Meylicious adalah kebahagiaan terbesar kami.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <span class="testi-product-tag">🍰 Basque Burnt Cheesecake Biscoff</span>
+          <div class="rating-stars" style="margin-bottom: 0.8rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-quote">
+            "Jujur ini salah satu Basque Cheesecake terenak yang pernah aku coba di Jakarta! Bagian tengahnya beneran lumer, manisnya pas banget nggak bikin eneg. Saus Biscoffnya berlimpah ruah. Wajib order lagi buat ulang tahun mama bulan depan!"
+          </p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Reviewer Clarissa">
+            <div>
+              <div class="testi-name">Clarissa Andini</div>
+              <div class="testi-location">Jakarta Selatan • Pembeli Terverifikasi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <span class="testi-product-tag">☕ Classic Mascarpone Tiramisu</span>
+          <div class="rating-stars" style="margin-bottom: 0.8rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-quote">
+            "Tiramisunya authentic banget! Keju mascarpone-nya lembut dan terasa mewah, paduan kopinya wangi semerbak tapi nggak pahit. Yang paling saya suka ada opsi non-alkohol halal. Dikirim dengan ice pack jadi suhunya tetap segar pas sampai."
+          </p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Reviewer Dimas">
+            <div>
+              <div class="testi-name">Dimas Wicaksono</div>
+              <div class="testi-location">Tangerang • Pembeli Terverifikasi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <span class="testi-product-tag">🎁 Signature Gift Hampers & Choux</span>
+          <div class="rating-stars" style="margin-bottom: 0.8rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-quote">
+            "Pesan hampers untuk kado anniversary teman kantor. Packaging-nya super mewah, pita dan kartu ucapannya sangat rapi dan estetik! Choux-nya garing di luar dan diplomat cream di dalamnya meleleh dingin. Rekomen 100% buat hadiah!"
+          </p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Reviewer Jessica">
+            <div>
+              <div class="testi-name">Jessica Nathalia</div>
+              <div class="testi-location">Jakarta Barat • Pembeli Terverifikasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ ACCORDION -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Tanya Jawab</span>
+        <h2 class="section-title">Pertanyaan Sering Diajukan</h2>
+        <p class="section-subtitle">
+          Temukan jawaban seputar ketahanan kue, jangkauan pengiriman, dan pemesanan khusus.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Berapa lama ketahanan kue Meylicious?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 200px;">
+            <div class="faq-answer-inner">
+              Basque Burnt Cheesecake dan Tiramisu tahan <strong>4 - 5 jam pada suhu ruang ber-AC</strong>, dan dapat bertahan hingga <strong>5 - 7 hari di dalam kulkas/chiller</strong> (simpan dalam wadah tertutup rapat). Brownies dan cookies tahan hingga 7 hari di suhu ruang dan 2 minggu di dalam kulkas.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Apakah melayani pengiriman di hari yang sama (Same-Day)?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Ya, kami menyediakan menu <em>ready stock</em> harian untuk pengiriman Instant & Sameday (pemesanan sebelum pukul 15.00 WIB). Namun untuk whole cake custom atau hampers dalam jumlah banyak, kami sarankan memesan H-1 agar dapat dipanggang secara khusus untuk Anda.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Apakah kue aman selama perjalanan kurir?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sangat aman! Setiap pengiriman kue dingin kami sertakan <strong>ice gel pack gratis</strong> serta stiker instruksi "KUE MUDAH RUSAK - JANGAN DIBALIK" untuk driver ojek online. Untuk kue ukuran 20cm ke atas, kami sarankan menggunakan pengiriman Instant Mobil (Car Delivery).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Apakah semua produk Meylicious 100% Halal?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Ya! Semua bahan baku yang kami gunakan (cream cheese, butter, cokelat, gelatin sapi halal) memiliki sertifikasi halal resmi dan kami <strong>tidak menggunakan rum, kahlua beralkohol, maupun minyak babi (lard)</strong>. Tiramisu kami menggunakan ekstrak kopi espresso asli non-alkohol.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Bisa request kartu ucapan dan lilin ulang tahun?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Bisa! Setiap pembelian whole cake sudah dilengkapi dengan <strong>1 buah lilin batang premium dan pisau kue gratis</strong>. Anda juga dapat menuliskan pesan ucapan khusus di kolom catatan saat checkout, dan tim kami akan mencetaknya ke kartu ucapan berdesain elegan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. PROMO CALL TO ACTION BANNER -->
+  <section class="promo-banner">
+    <div class="container">
+      <div class="promo-inner">
+        <div class="promo-text">
+          <h2 class="promo-title">Butuh Kue Ulang Tahun atau Hampers Perusahaan?</h2>
+          <p class="promo-subtitle">
+            Konsultasikan kebutuhan cake custom, dessert table, atau paket hampers spesial Anda langsung bersama tim pastry chef Meylicious.
+          </p>
+          <div class="promo-action">
+            <a href="https://wa.me/6281234567890?text=Halo%20Meylicious,%20saya%20ingin%20konsultasi%20pemesanan%20kue%20custom%20/%20hampers" target="_blank" class="btn btn-primary" style="background: var(--white); color: var(--primary-dark);">
+              <i class="fab fa-whatsapp" style="color: #25d366;"></i> Chat Tim Pastry Kami
+            </a>
+          </div>
+        </div>
+        <div>
+          <i class="fas fa-birthday-cake" style="font-size: 8rem; color: rgba(255, 255, 255, 0.12);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <div class="brand-name">Mey<span>licious</span></div>
+          <div class="brand-tagline">Artisanal Dessert & Bakery</div>
+          <p class="footer-desc">
+            Menghadirkan kelezatan dessert premium dengan bahan baku terbaik dunia. Setiap gigitan adalah cerita manis penuh cinta.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" class="social-icon" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/6281234567890" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#hero">Beranda</a></li>
+            <li class="footer-link"><a href="#menu">Katalog Menu</a></li>
+            <li class="footer-link"><a href="#about">Tentang Meylicious</a></li>
+            <li class="footer-link"><a href="#steps">Panduan Pesan</a></li>
+            <li class="footer-link"><a href="#testimonials">Ulasan Pelanggan</a></li>
+            <li class="footer-link"><a href="#faq">Pertanyaan (FAQ)</a></li>
+          </ul>
+        </div>
+
+        <!-- Menu Categories -->
+        <div>
+          <h4 class="footer-title">Menu Favorit</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#menu">Basque Burnt Cheesecake</a></li>
+            <li class="footer-link"><a href="#menu">Lotus Biscoff Cheesecake</a></li>
+            <li class="footer-link"><a href="#menu">Italian Mascarpone Tiramisu</a></li>
+            <li class="footer-link"><a href="#menu">Shiny Crust Brownies</a></li>
+            <li class="footer-link"><a href="#menu">Crispy Choux Craquelin</a></li>
+            <li class="footer-link"><a href="#menu">Gift Hampers Box</a></li>
+          </ul>
+        </div>
+
+        <!-- Store Details -->
+        <div>
+          <h4 class="footer-title">Kontak & Lokasi</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Duren, Jakarta & Jabodetabek (Kitchen Hub)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Setiap Hari: 08.00 - 20.00 WIB</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>+62 812-3456-7890 (Admin Order)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-motorcycle"></i>
+            <span>Tersedia di GrabFood / GoFood / ShopeeFood</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <div>© 2026 Meylicious Patisserie. Seluruh Hak Cipta Dilindungi.</div>
+        <div>Crafted with Sweet Love & Passion 🍰</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 12. SHOPPING CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer">
+      <!-- Header -->
+      <div class="cart-header">
+        <div class="cart-header-title">
+          <i class="fas fa-shopping-bag" style="color: var(--primary);"></i>
+          <span>Keranjang Pesanan</span>
+        </div>
+        <button class="cart-close-btn" onclick="closeCartDrawer()" title="Tutup">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Empty State -->
+      <div class="cart-empty-state" id="cart-empty-state">
+        <div class="cart-empty-icon"><i class="fas fa-basket-shopping"></i></div>
+        <h4>Keranjang Anda Kosong</h4>
+        <p>Yuk pilih varian Basque Cheesecake atau dessert favorit Anda sekarang!</p>
+        <button class="btn btn-primary" onclick="closeCartDrawer(); location.href='#menu';" style="margin-top: 1.25rem;">
+          Lihat Pilihan Menu
+        </button>
+      </div>
+
+      <!-- Cart Item List -->
+      <div class="cart-body" id="cart-items-container" style="display: none;">
+        <!-- Injected dynamically via app.js -->
+      </div>
+
+      <!-- Footer & Totals -->
+      <div class="cart-footer" id="cart-footer-block" style="display: none;">
+        <!-- Promo voucher block -->
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+          <input type="text" id="promo-input" placeholder="Kode Promo (MEYMANIS)" class="form-control" style="font-size: 0.85rem; padding: 0.5rem 0.8rem; text-transform: uppercase;" />
+          <button onclick="applyPromoCode()" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Pakai</button>
+        </div>
+
+        <div class="cart-summary-line">
+          <span>Subtotal Menu</span>
+          <span id="cart-subtotal">Rp 0</span>
+        </div>
+        <div class="cart-summary-line" id="cart-discount-row" style="display: none; color: #2a9d8f;">
+          <span>Potongan Diskon</span>
+          <span id="cart-discount-val">- Rp 0</span>
+        </div>
+        <div class="cart-summary-line total">
+          <span>Total Pembayaran</span>
+          <span class="total-amount" id="cart-grand-total">Rp 0</span>
+        </div>
+
+        <button class="btn btn-primary btn-checkout" onclick="openCheckoutModal()">
+          Lanjut Isi Alamat & Checkout <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13. CHECKOUT MODAL (DATA PEMESANAN WHATSAPP) -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fab fa-whatsapp" style="color: #25d366;"></i> Data Pemesanan & Pengiriman</h3>
+        <button class="modal-close-btn" onclick="closeCheckoutModal()" title="Tutup">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <form id="order-form" onsubmit="submitOrderToWhatsApp(event)">
+        <div class="modal-content">
+          <div class="delivery-note-box">
+            <i class="fas fa-info-circle" style="font-size: 1.1rem; margin-top: 1px;"></i>
+            <span>Pesanan akan dirangkum otomatis dan dikirimkan ke WhatsApp resmi Meylicious untuk konfirmasi pembayaran & jadwal pengiriman.</span>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="order-name">Nama Pemesan <span class="req">*</span></label>
+              <input type="text" id="order-name" class="form-control" placeholder="Contoh: Rina Melati" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="order-phone">Nomor WhatsApp <span class="req">*</span></label>
+              <input type="tel" id="order-phone" class="form-control" placeholder="Contoh: 08123456789" required />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="order-date">Tanggal Pengiriman <span class="req">*</span></label>
+              <input type="date" id="order-date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="order-time">Pilihan Jam Antar</label>
+              <select id="order-time" class="form-control">
+                <option value="Pagi (09.00 - 12.00)">Pagi (09.00 - 12.00)</option>
+                <option value="Siang (12.00 - 15.00)" selected>Siang (12.00 - 15.00)</option>
+                <option value="Sore (15.00 - 18.00)">Sore (15.00 - 18.00)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-courier">Metode Pengantaran</label>
+            <select id="order-courier" class="form-control">
+              <option value="Instant Motor (Ojek Online + Ice Pack)">Instant Motor (Ojek Online + Ice Pack)</option>
+              <option value="Instant Mobil / Car Delivery (Direkomendasikan untuk kue besar/tinggi)">Instant Mobil / Car Delivery (Aman untuk kue besar)</option>
+              <option value="Sameday Delivery (Radius Jabodetabek)">Sameday Delivery (Jabodetabek)</option>
+              <option value="Pick-Up Mandiri di Kitchen Meylicious">Ambil Sendiri di Dapur Meylicious</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-address">Alamat Lengkap Pengiriman <span class="req">*</span></label>
+            <textarea id="order-address" class="form-control" rows="2" placeholder="Nama jalan, nomor rumah, blok, RT/RW, kelurahan, patokan lokasi..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-notes">Catatan Khusus / Tulisan Kartu Ucapan</label>
+            <textarea id="order-notes" class="form-control" rows="2" placeholder="Contoh: Tolong tuliskan di kartu: 'Happy 25th Birthday Sarah!', request lilin angka 25."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeCheckoutModal()">Batal</button>
+          <button type="submit" class="btn btn-primary" style="background: #25d366; border-color: #25d366;">
+            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Kirim Pesanan ke WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 14. QUICK VIEW MODAL -->
+  <div class="modal-overlay" id="quick-view-modal">
+    <div class="modal-box" style="max-width: 650px;">
+      <div class="modal-header">
+        <h3><i class="fas fa-cake-candles" style="color: var(--primary);"></i> Detail Menu</h3>
+        <button class="modal-close-btn" onclick="closeQuickView()" title="Tutup">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-content" id="quick-view-content">
+        <!-- Dynamically injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 15. TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- 16. FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6281234567890?text=Halo%20Meylicious,%20saya%20ingin%20bertanya%20seputar%20menu%20dan%20order" target="_blank" class="floating-whatsapp" aria-label="Hubungi WhatsApp" title="Chat WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- 17. MOBILE STICKY BOTTOM BAR -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-sticky-total">
+      <span>Total Pesanan:</span>
+      <strong id="mobile-sticky-total-val">Rp 0</strong>
+    </div>
+    <button class="btn btn-primary" onclick="openCartDrawer()" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+      <i class="fas fa-shopping-bag"></i> Keranjang (<span class="cart-count">0</span>)
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
